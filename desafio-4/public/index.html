@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Añadir producto</h2>
+    <form action="/api/productos" method="POST">
+        <span>Nombre del producto</span>
+        <input type="text" name="nombre">
+        <span>Precio</span>
+        <input type="number" name="precio">
+        <span>Thumbnail</span>
+        <input type="text" name="thumbnail">
+        <button>Enviar</button>
+    </form>
+</body>
+</html>
