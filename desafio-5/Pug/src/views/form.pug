@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  a(href='/productos')
+    button(type='button') Ver Productos
+  h2 Ingresa un nuevo producto
+  form(action='/productos' method='POST')
+    label Nombre del producto
+    input(type='text' name='title')
+    label Precio
+    input(type='number' name='price')
+    label Thumbnail
+    input(type='text' name='thumbnail')
+    button(type='submit') Agregar

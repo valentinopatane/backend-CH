@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  a(href='/')
+    button(type='button') Volver
+  h2 Productos
+
+  if arrayProducts.length > 0
+    table
+      thead
+        tr
+          th Nombre
+          th Precio
+          th Thumbnail
+      tbody
+        each product in arrayProducts
+          tr
+            th= product.title
+            td= product.price
+            td
+              img(src=product.thumbnail alt='product img')
+  else          
+    h4 No hay productos disponibles

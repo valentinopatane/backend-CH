@@ -1,0 +1,33 @@
+<a href="/">Volver</a>
+
+<h1>API Productos - Handlebars</h1>
+<h2>Productos</h2>
+
+{{#if arrayProducts}}
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Imagen</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each arrayProducts}}
+        <tr>
+          <th>{{this.title}}</th>
+          <td>{{this.price}}</td>
+          <td>
+            <div>
+              <img src={{this.thumbnail}} alt='product img'/>
+            </div>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <div>
+    <h4>No hay productos disponibles</h4>
+  </div>
+{{/if}}

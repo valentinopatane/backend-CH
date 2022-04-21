@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio 5</title>
+  </head>
+  <body>
+    <div>
+      <h1>Products API - EJS</h1>
+
+      <a href="/productos">
+        <button type="button">Ver Productos</button>
+      </a>
+      
+      <h2>Ingresa un producto nuevo</h2>
+
+      <form action="/productos" method="POST">
+        <span>Nombre del producto</span>
+        <input type="text" name="title">
+        <span>Precio</span>
+        <input type="number" name="price">
+        <span>Thumbnail</span>
+        <input type="text" name="thumbnail">
+        <button>Enviar</button>
+      </form>
+    </div>
+  </body>
+</html>

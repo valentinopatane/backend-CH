@@ -2,7 +2,7 @@
   "name": "be-30935",
   "version": "1.0.0",
   "description": "Desafíos del curso de Backend de CODERHOUSE.",
-  "main": "index.js",
+  "main": "app.js",
   "dependencies": {
     "express": "^4.17.3",
     "express-handlebars": "^6.0.5",

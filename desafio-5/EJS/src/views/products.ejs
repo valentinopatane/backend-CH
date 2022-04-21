@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio 5</title>
+  </head>
+  <body>
+    <div>
+      <div>
+        <a href="/">Volver</a>
+        <h1>API Productos - EJS</h1>
+        <h2>Productos</h2>
+
+
+
+        <% if(arrayProducts.length > 0){ %>
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Precio</th>
+              <th>Imagen</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for (const product of arrayProducts) {%>
+            <tr>
+              <th><%=product.title%></th>
+              <td><%=product.price%></td>
+              <td>
+                <div>
+                  <img src="<%= product.thumbnail %>" alt="product img"/>
+                </div>
+              </td>
+            </tr>
+            <%}%>
+          </tbody>
+        </table>
+        <% } else { %>
+        <div>
+          <h4>No hay productos disponibles</h4>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>
