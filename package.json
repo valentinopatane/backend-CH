@@ -4,7 +4,7 @@
   "description": "Desafíos del curso de Backend de CODERHOUSE.",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.3",
+    "express": "^4.18.1",
     "express-handlebars": "^6.0.5",
     "nodemon": "^2.0.15"
   },
