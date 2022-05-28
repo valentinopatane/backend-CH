@@ -1,0 +1,20 @@
+{
+  "name": "desafio-10-preeentrega-2",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:json": "cross-env DB_ENV=json node .",
+    "start:mongodb": "cross-env DB_ENV=mongodb node .",
+    "start:firebase": "cross-env DB_ENV=firebase node ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "firebase-admin": "^10.2.0",
+    "mongoose": "^6.3.4"
+  }
+}

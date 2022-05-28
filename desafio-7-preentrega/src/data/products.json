@@ -1,5 +1,12 @@
 [
-    {"id":1,"title":"Escuadra","description":"Descripción de producto","price":123.45,"stock":10,"thumbnail":"https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-64.png"},
-    {"id":2,"title":"Calculadora","description":"Descripción de producto","price":234.56,"stock":10,"thumbnail":"https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-64.png"},
-    {"id":3,"title":"Globo Terráqueo","description":"Descripción de producto","price":345.67,"stock":10,"thumbnail":"https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-64.png"}
+    {"id":1,"name":"Escuadra","description":"Descripción de producto","price":120,"stock":10,"thumbnail":"https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-64.png"},
+    {"id":2,"name":"Calculadora","description":"Descripción de producto","price":580,"stock":10,"thumbnail":"https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-64.png"},
+    {"id":3,"name":"Globo Terráqueo","description":"Descripción de producto","price":900,"stock":10,"thumbnail":"https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-64.png"},
+    {"id":4,"name":"Lápiz","description":"Descripción de producto","price":1280,"stock":10,"thumbnail":"https://cdn2.iconfinder.com/data/icons/flat-pack-1/64/Pencil-256.png"},
+    {"id":5,"name":"Goma","description":"Descripción de producto","price":1700,"stock":10,"thumbnail":"https://cdn1.iconfinder.com/data/icons/office-icons-17/512/ilustracoes_04-08-256.png"},
+    {"id":6,"name":"Cuaderno","description":"Descripción de producto","price":2300,"stock":10,"thumbnail":"https://cdn1.iconfinder.com/data/icons/office-things/136/notebook_3-256.png"},
+    {"id":7,"name":"Libro","description":"Descripción de producto","price":2860,"stock":10,"thumbnail":"https://cdn1.iconfinder.com/data/icons/office-icons-17/512/ilustracoes_04-10-256.png"},
+    {"id":8,"name":"Pera","description":"Descripción de producto","price":3350,"stock":10,"thumbnail":"https://cdn3.iconfinder.com/data/icons/fruits-52/150/icon_fruit_pera-256.png"},
+    {"id":9,"name":"Manzana","description":"Descripción de producto","price":4320,"stock":10,"thumbnail":"https://cdn3.iconfinder.com/data/icons/food-and-drink-color/64/apple_food_fruit_healthy_juice_diet_vegetarian-256.png"},
+    {"id":10,"name":"Mochila","description":"Descripción de producto","price":4990,"stock":10,"thumbnail":"https://cdn4.iconfinder.com/data/icons/back-to-school-149/64/backpack-school-bag-school-education-512.png"}
 ]
