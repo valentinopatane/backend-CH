@@ -1,49 +1,9 @@
 //-----------------SOCKET-----------------//
 const socket = io()
 
-//-----------------LOG IN-----------------//
-
-const logIn = document.getElementById('logIn')
-logIn.addEventListener('submit', (e)=>{
-    e.preventDefault();
-    let user = logIn[0].value
-    socket.emit('logIn', user )
+socket.on('plataforma', ()=>{
+    console.log(socket.id)
 })
-
-
-socket.on('logged', async (user)=>{
-
-    const templateResource = await fetch('js/templates/welcome.hbs')
-    const templateText = await templateResource.text()
-    const templateHandlebar = Handlebars.compile(templateText)
-
-    console.log(user + ' front')
-
-    fetch('/login')
-    .then(()=>{
-        const html = templateHandlebar({user})
-        document.getElementById('welcome').innerHTML = html
-    })
-    .catch(error=>console.log(error))
-
-//-----------------LOG OUT-----------------//
-    const logout = document.getElementById('logout')
-    logout.addEventListener('click', (e)=>{
-        e.preventDefault()
-        fetch('/logout')
-        .then(()=>{
-            document.getElementById('welcome').innerHTML = '<h2>Session Closed</h2>'
-        })
-        .catch((error)=>console.log(error))
-    })
-
-    // window.location.replace('/con-session')
-})
-
-
-
-
-
 
 //-----------------PRODUCTS-----------------//
 socket.on('showProducts', productHandler);

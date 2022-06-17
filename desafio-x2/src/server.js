@@ -14,7 +14,6 @@ import MongoClass from './handlers/messageMongoClass.js';//<---Message class usi
 import fakerRouter from './router/fakerRouter.js'//<---Router random products with Faker
 
 import { normalize,schema } from "normalizr";//<---Normalizer,used on socket
-import util from 'util'//<---Util, console log on detail
 
 import mongoose from 'mongoose';
 const esquema = mongoose.Schema;
@@ -84,6 +83,8 @@ app.get('/login', (req, res) => {
       else res.send({ status: 'Logout ERROR', body: err })
     })
   })
+
+  
 //-----------------------WEBSOCKET-----------------------//
 
     io.on('connection', async(socket)=>{
