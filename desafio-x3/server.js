@@ -61,8 +61,8 @@ const io = new IOServer(httpServer)
 
 //-----------------------WEBSOCKET-----------------------//
 
-io.on('plataforma', async(socket)=>{
-  console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
+io.on('connection', async(socket)=>{
+  console.log('funciona')
   socket.on('logIn', user=>{
       console.log(user)
       socket.emit('logged', user)
@@ -236,7 +236,7 @@ app.get('/logout', (req, res) => {
 
 /* --------- SERVER BASICS ---------- */
 const PORT = 8080
-const server = app.listen(PORT, () => {
+const server = httpServer.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`)
 })
 server.on("error", error => console.log(`Error en servidor: ${error}`))

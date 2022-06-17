@@ -1,15 +1,12 @@
 //-----------------SOCKET-----------------//
 const socket = io()
 
-socket.on('plataforma', ()=>{
-    console.log(socket.id)
-})
-
 //-----------------PRODUCTS-----------------//
 socket.on('showProducts', productHandler);
 
 async function productHandler(products){
-    const templateResource = await fetch('js/templates/product-table.hbs')
+    console.log('aaa')
+    const templateResource = await fetch('./views/templates/product-table.hbs')
     const templateText = await templateResource.text()
 
     const templateHandlebar = Handlebars.compile(templateText)
@@ -37,7 +34,7 @@ form.addEventListener('submit',  e =>{
 socket.on('showMessages', messagesHandler)
 
 async function messagesHandler(newArrayMessages){
-    const templateResource = await fetch('js/templates/chat.hbs')
+    const templateResource = await fetch('./views/templates/chat.hbs')
     const templateText = await templateResource.text()
 
     const templateHandlebar = Handlebars.compile(templateText)
