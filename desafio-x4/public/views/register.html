@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/style.css">
+
+
+</head>
+
+<body>
+
+  <div class="loginSec">
+    <div class="formLoginContainer">
+
+      <h1>REGISTER</h1>
+      <form class="formLogin" action="/register" method="post" role="form" autocomplete="off">
+
+        <div class="formLoginItem">
+          <input id="nombre" name='username' placeholder="Username" class="form-control" type="text" required>
+        </div>
+
+        <div class="formLoginItem">
+          <input id="password" name='password' placeholder="Password" class="form-control" type="password" required>
+        </div>
+
+        <div class="formLoginItem">
+          <input id="direccion" name='email' placeholder="Email" class="form-control" type="email" required>
+        </div>
+
+        <div class="formLoginItem">
+          <input class="button" type="submit" value="Register">
+        </div>
+      </form>
+
+      <div class="formLoginItem" id="register" >
+        <button class="button" onclick="location.href = '/login'">Ir a Login</button>
+      </div>
+
+    </div>
+    <div class="loginIMG">
+      <img src="../img/fondo.jpg" alt="fondo">
+    </div>
+  </div>
+
+</body>
+
+</html>
