@@ -27,6 +27,11 @@ import randomRouter from './src/router/randomRouter.js'
 import { productSocket } from './src/sockets/productSocket.js';
 import { messageSocket } from './src/sockets/messageSocket.js';
 
+//-----------------------CLUSTER-----------------------//
+import cluster from 'cluster';
+import os from 'os'
+// console.log(os.cpus())
+
 /* --------------------- SERVER --------------------------- */
 
 const app = express();
@@ -138,8 +143,8 @@ app.get('/logout', (req, res) => {
 })
 
 /* --------- SERVER BASICS ---------- */
-const PORT = 8080
+const PORT = parseInt(process.argv[2]) || 8080
 const server = httpServer.listen(PORT, () => {
-  console.log(`Servidor escuchando en el puerto ${PORT}`)
+  console.log(`Servidor escuchando en el puerto ${PORT} ${process.pid}`)
 })
 server.on("error", error => console.log(`Error en servidor: ${error}`))
