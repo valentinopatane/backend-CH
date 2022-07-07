@@ -29,9 +29,18 @@ import { messageSocket } from './src/sockets/messageSocket.js';
 
 //-----------------------CLUSTER-----------------------//
 import cluster from 'cluster';
-import os from 'os'
-// console.log(os.cpus())
+import logger from './src/utils/logger.js';
 
+if (cluster.isPrimary && PORT.m == 'CLUSTER') {
+  logger.info(`PID MASTER ${process.pid}`)
+  for (let i = 0; i < numCPUs; i++) {
+    cluster.fork()
+  }
+  cluster.on('exit', worker => {
+    logger.info('Worker', worker.process.pid, 'died', new Date().toLocaleString())
+    cluster.fork()
+  })
+}
 /* --------------------- SERVER --------------------------- */
 
 const app = express();
@@ -66,6 +75,11 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static('public'))
 
+
+app.all('/*', (req, res, next) => {
+  logger.info(`${req.method} a ${req.path}`);
+  next();
+})
 
 /* ------------------ PASSPORT -------------------- */
 

@@ -1,20 +1,21 @@
 import { Router } from 'express';
-
+import compression from 'compression'
 
 const infoRouter = Router();
 
-infoRouter.get('/', (req,res) => {
+infoRouter.get('/', compression(), (req,res) => {
 
-    const datos = {
-        execArg: process.execArgv,
+    let info = {
+        args: process.argv,
         platform: process.platform,
-        nodeVersion:process.versions.node,
-        memory: process.memoryUsage.rss,
-        execPath: process.argv[0],
-        processID: process.pid,
-        projectFolder: process.argv[1],
-    }
-    res.send(JSON.stringify(datos))
+        version: process.version,
+        memory: JSON.stringify(process.memoryUsage()),
+        path: process.execPath,
+        pid: process.pid,
+        cwd: process.cwd(),
+        CPUS: numCPUs
+      }
+      res.json(info);
 })
 
 
