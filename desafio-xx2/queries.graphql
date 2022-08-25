@@ -1,0 +1,71 @@
+mutation {
+    createProducts(
+        data: {
+            name: Manzana   
+            description: Es roja
+            category: Frutas
+            image: manzana.jpg
+            code: M12
+            price: 10
+            stock: 200
+        }
+    ) {
+        name
+    }
+}
+
+query {
+    getProducts {
+        name
+        description
+        category
+        price
+        stock
+    }
+}
+
+query {
+    getProducts(campo: "category", valor: "Frutas") {
+        name
+        description
+        category
+        price
+        stock
+    }
+}
+
+query {
+    getProduct(id: "xxxxxxxxxxxxx") {
+        name
+        description
+        category
+        price
+        stock
+    }
+}
+
+
+mutation {
+    updatePersona(
+        id: "xxxxxxxxxxxxx"
+        data: {
+            name: Manzana   
+            description: Es verde
+            category: Frutas
+            image: manzana.jpg
+            code: M12
+            price: 10
+            stock: 50
+        }
+    ) {
+        id
+        name
+    }
+}
+
+mutation {
+    deletePersona(id: "xxxxxxxxxxxxx") {
+        id
+        name
+    }
+}
